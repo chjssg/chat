@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>无标题文档</title>
+		<style>
+			#div1 {
+				width: 200px;
+				height: 200px;
+				background: red;
+				position: absolute;
+				z-index: 100;
+			}
+			#div2 {
+				width: 200px;
+				height: 200px;
+				background: green;
+				position: absolute;
+				z-index: 100;
+			}
+		</style>
+		<script>
+			
+			function Move(id) {
+				var _this = this;
+				this.oDiv = document.getElementById(id);
+				this.disX = 0;
+				this.disY = 0;
+
+				this.oDiv.onmousedown = function(ev){
+					_this.fnMove(ev);
+				}
+			};
+
+			Move.prototype.fnMove=function(ev) {
+				var oEvent = ev || event;
+				
+				var _this = this;
+				
+				this.disX = oEvent.clientX - this.oDiv.offsetLeft;
+				this.disY = oEvent.clientY - this.oDiv.offsetTop;
+
+				document.onmousemove = function(ev) {
+					_this.mouseMove(ev);
+				}
+
+				document.onmouseup = function() {
+					_this.mouseUp();
+				};
+ 
+			};
+
+			Move.prototype.mouseMove=function(ev) {
+				var oEvent = ev || event;
+
+				this.oDiv.style.left = oEvent.clientX - this.disX + 'px';
+				this.oDiv.style.top = oEvent.clientY - this.disY + 'px';
+			};
+
+			Move.prototype.mouseUp=function() {
+				document.onmousemove = null;
+				document.onmouseup = null;
+			};
+			window.onload = function() {
+				new Move('div1');
+				new sonMove('div2');
+			}
+			//继承
+			function sonMove() {
+				Move.call(this,'div2');
+			}
+			for(var i  in Move.prototype){
+				sonMove.prototype[i] = Move.prototype[i];
+			}
+			
+		</script>
+	</head>
+
+	<body>
+		<div id="div1"></div>
+		<div id="div2"></div>
+	</body>
+
+</html>

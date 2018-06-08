@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="input" id="input" value="" />
+		<input type="button" name="button" id="button" value="提交" />
+	</body>
+	<script src="js/socket.io.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var oInput = document.getElementById('input');
+		var oBtn = document.getElementById('button');
+		
+		var socket = io.connect();
+		
+		oBtn.addEventListener('click',function() {
+			var val = oInput.value;
+			socket.emit('sendData',val);
+		})
+		
+		socket.on('getData',function(data) {
+			var oP = document.createElement('p');
+			oP.innerHTML=data;
+			document.body.appendChild(oP);
+		})
+	</script>
+</html>

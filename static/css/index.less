@@ -1,0 +1,301 @@
+
+
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .clearfix:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+    
+    .clearfix {
+        *zoom: 1;
+    }
+    
+    .container {
+        width: 100%;
+        height: 100%;
+        .nav {
+            height: 70px;
+            background: rgba(49, 49, 51, 1);
+            .navbar {
+                height: 25px;
+                position: relative;
+                span {
+                    color: white;
+                }
+                .icon-xinhao {
+                    font-size: 45px;
+                    position: absolute;
+                    top: -10px;
+                    left: 5px;
+                }
+                .icon-iconwifi {
+                    font-size: 20px;
+                    position: absolute;
+                    top: 2px;
+                    left: 115px;
+                }
+                .icon-dianliangbeijing {
+                    font-size: 36px;
+                    position: absolute;
+                    top: -5px;
+                    right: 5px;
+                }
+                i {
+                    color: white;
+                    font-style: normal;
+                    font-size: 14px;
+                }
+                .i1 {
+                    position: absolute;
+                    top: 7px;
+                    left: 50px;
+                }
+                .i2 {
+                    position: absolute;
+                    top: 7px;
+                    right: 42px;
+                }
+                .timer {
+                    margin: 0 auto;
+                    font-size: 14px;
+                    color: white;
+                    text-align: center;
+                    padding-top: 7px;
+                }
+            }
+            .navmain {
+                height: 45px;
+                position: relative;
+                .icon-toLeft-copy {
+                    position: absolute;
+                    display: inline-block;
+                    color: white;
+                    font-size: 22px;
+                    left: 11px;
+                    top: 10px;
+                }
+                .d1 {
+                    color: white;
+                    margin: 0 auto;
+                    font-style: normal;
+                    font-size: 22px;
+                    text-align: center;
+                    padding-top: 12px;
+                }
+                .icon-iconfontlianxiren01 {
+                    position: absolute;
+                    display: inline-block;
+                    color: white;
+                    font-size: 22px;
+                    right: 15px;
+                    top: 10px;
+                }
+            }
+        }
+        .context {
+            height: 615px;
+            overflow: scroll;
+            background: rgb(235, 235, 235);
+            .chatRight {
+                position: relative;
+                top: 0px;
+                img {
+                    width: 44px;
+                    height: 44px;
+                    position: absolute;
+                    right: 12px;
+                    top: 10px;
+                }
+                .name {
+                    font-size: 10px;
+                    color: rgb(192, 178, 178);
+                    position: absolute;
+                    top: 14px;
+                    right: 83px;
+                }
+                .chat {
+                    position: absolute;
+                    top: 30px;
+                    right: 65px;
+                    .text {
+                        background: rgb(131, 242, 86);
+                        float: left;
+                        font-size: 18px;
+                        padding: 7px;
+                        border-radius: 3px;
+                        border: none;
+                    }
+                    .tra {
+                        background: rgb(131, 242, 86);
+                        width: 0;
+                        height: 0;
+                        border-top: 5px solid rgb(235, 235, 235);
+                        border-left: 5px solid rgba(131, 242, 86, 1);
+                        border-bottom: 5px solid rgb(235, 235, 235);
+                        float: left;
+                        margin-top: 10px;
+                        background: rgba(0, 0, 0, 0);
+                    }
+                }
+            }
+            .chatleft {
+                position: relative;
+                top: 0px;
+                img {
+                    width: 44px;
+                    height: 44px;
+                    position: absolute;
+                    left: 12px;
+                    top: 10px;
+                }
+                .name1 {
+                    font-size: 10px;
+                    color: rgb(192, 178, 178);
+                    position: absolute;
+                    top: 14px;
+                    left: 83px;
+                }
+                .chat1 {
+                    position: absolute;
+                    top: 30px;
+                    left: 65px;
+                    .text1 {
+                        background: rgb(255, 255, 255);
+                        float: right;
+                        font-size: 18px;
+                        padding: 7px;
+                        border-radius: 3px;
+                        border: none;
+                    }
+                    .tra1 {
+                        background: rgb(255, 255, 255);
+                        width: 0;
+                        height: 0;
+                        border-top: 5px solid rgb(235, 235, 235);
+                        border-right: 5px solid rgba(255, 255, 255, 1);
+                        border-bottom: 5px solid rgb(235, 235, 235);
+                        float: right;
+                        margin-top: 10px;
+                        background: rgba(0, 0, 0, 0);
+                    }
+                }
+            }
+        }
+        .footer {
+            height: 55px;
+            width: 100%;
+            background: rgb(244, 244, 246);
+            //      position: fixed;
+            position: fixed;
+            span {
+                color: gray;
+            }
+            div {
+                display: inline-block;
+                margin-left: 5px;
+                input {
+                    position: absolute;
+                    top: 10px;
+                    left: 54px;
+                    display: inline-block;
+                    width: 250px;
+                    height: 35px;
+                    padding-left: 5px;
+                    border-radius: 5px;
+                    font-size: 25px;
+                    border: none;
+                    outline: none;
+                    line-height: 30px;
+                }
+            }
+            .icon-yuyin {
+                display: inline-block;
+                font-size: 35px;
+                padding-left: 10px;
+                padding-top: 10px;
+            }
+            .icon-xiaolian {
+                display: inline-block;
+                font-size: 39px;
+                float: right;
+                padding-top: 3px;
+                padding-right: 10px;
+            }
+            .icon-jiahao1 {
+                display: inline-block;
+                font-size: 39px;
+                float: right;
+                padding-right: 10px;
+                padding-top: 7px;
+            }
+        }
+    }
+    
+    body {
+        width: 100%;
+    }
+    
+    .mask {
+        display: none;
+        background: rgba(0, 0, 0, 0.3);
+        width: 100%;
+        height: 100%;
+        position: fixed; //利用固定定位的好处：页面还可以上下翻动，但是始终处于灰色背景下
+    }
+    
+    .login { 
+        display: none;
+        border-radius:10px ;
+        background: white;
+        width: 400px;
+        height: 250px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -200px;
+        margin-top: -125px;
+        h3{
+            margin-top: 65px;
+            margin-left: 60px;
+        }
+        .sayName{
+            border: 1px solid black;
+            font-size: 18px;
+            margin-top: 46px;
+            margin-left: 90px;
+            border-radius: 3px;
+            padding-left: 3px;
+        }
+        #confire{
+            font-size: 17px;
+            background: green;
+            border-radius:5px ;
+            border: none;
+            padding: 7px;
+        }
+    }
+    
+   
+.div1{
+            position: relative;
+            
+        }
+        .span1{
+            text-align: center;
+            
+            display: block;
+            
+            margin: 0 auto;
+            
+        }
+        .span2{
+            padding: 3px;
+            background: rgb(192, 178, 178);;
+            border-radius: 3px;
+        }
